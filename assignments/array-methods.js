@@ -101,8 +101,21 @@ runners.forEach(function(eachRunner){
   if(eachRunner.donation > 200) premiumRunners.push(eachRunner.first_name + " " + eachRunner.last_name + " " + eachRunner.email);
 });
 console.log(premiumRunners);
+
 // Problem 2
+// Find the number of runners with small shirt size 
+let runnersSmallSizeShirt = [];
+runnersLargeSizeShirt = runners.filter(runner => runner.shirt_size === 'S');
+console.log(`There are ${runnersLargeSizeShirt.length} runners with SMALL SHIRT SIZE!`);
 
 
 
 // Problem 3
+//return the details of the last ten runners
+let detailsOfLastTenRunners = [];
+let totalNumberOfRunners = runners.length;
+let lastTenRunners = totalNumberOfRunners - 10;
+for (let i = lastTenRunners; i < totalNumberOfRunners; i++){
+  detailsOfLastTenRunners.push(runners[i]);
+}
+console.log(detailsOfLastTenRunners);
