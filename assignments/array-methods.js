@@ -105,8 +105,8 @@ console.log(premiumRunners);
 // Problem 2
 // Find the number of runners with small shirt size 
 let runnersSmallSizeShirt = [];
-runnersLargeSizeShirt = runners.filter(runner => runner.shirt_size === 'S');
-console.log(`There are ${runnersLargeSizeShirt.length} runners with SMALL SHIRT SIZE!`);
+runnersSmallSizeShirt = runners.filter(runner => runner.shirt_size === 'S');
+console.log(`There are ${runnersSmallSizeShirt.length} runners with SMALL SHIRT SIZE!`);
 
 
 
