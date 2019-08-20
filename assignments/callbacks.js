@@ -38,29 +38,47 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   // "this Pencil is worth a million dollars!"
 */
 
-
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length);
 }
+//TESTING MY HIGHER ORDER FUNCTIONS getLength();
+let randomString = ["isdjo", "jioajsdods", "somiejoiije"];
+
+//one callback function to test them all, hahahahaha!!!!
+function returnValuePassed(len){
+  return len;
+}
+console.log(getLength(randomString, returnValuePassed));
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   let indexOfLastItem = arr.length - 1;
   return cb(arr[indexOfLastItem]);
 }
+//TESTING MY HIGHER ORDER FUNCTIONS last();
+console.log(last(randomString, returnValuePassed));
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   let resultOfSum = x + y;
   return cb(resultOfSum);
 }
+//TESTING MY HIGHER ORDER FUNCTIONS sumNums();
+console.log(sumNums(20, 30, returnValuePassed));
+
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   let resultOfMultiplication = x * y;
   return cb(resultOfMultiplication);
 }
+//TESTING MY HIGHER ORDER FUNCTIONS multiplyNums();
+console.log(multiplyNums(20, 30, returnValuePassed));
+
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.  
@@ -73,6 +91,12 @@ function contains(item, list, cb) {
 
 }
 
+//TESTING MY HIGHER ORDER FUNCTIONS contains();
+let item2 = "mickey";
+let arraylist = ["topsdfe", "shadey", "mickey"];
+console.log(contains(item2, arraylist, returnValuePassed));//returns true, i checked!
+
+
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
@@ -80,3 +104,4 @@ function removeDuplicates(array, cb) {
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
