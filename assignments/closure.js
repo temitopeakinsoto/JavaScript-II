@@ -4,6 +4,16 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function person() {
+  const first_name = "Temitope";
+  const last_name = "Akinsoto";
+​
+  return function() {
+    const full_name = first_name + " " + last_name;
+    return full_name;
+  };
+}
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
